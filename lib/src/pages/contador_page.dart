@@ -26,6 +26,7 @@ class _ContadorPageState extends State<ContadorPage> {
               ),
               Text(
                 '$_conteo',
+                key: Key('counter'),
                 style: _estiloTexto,
               )
             ],
@@ -41,16 +42,19 @@ class _ContadorPageState extends State<ContadorPage> {
       children: <Widget>[
         SizedBox(width: 30.0),
         FloatingActionButton(
+          key: Key('zero'),
           child: Icon(Icons.exposure_zero),
           onPressed: _reset,
         ),
         Expanded(child: SizedBox()),
         FloatingActionButton(
+          key: Key('decrement'),
           child: Icon(Icons.remove),
           onPressed: _sustraer,
         ),
         SizedBox(width: 5.0),
         FloatingActionButton(
+          key: Key('increment'),
           child: Icon(Icons.add),
           onPressed: _agregar,
         )
