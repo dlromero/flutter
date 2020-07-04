@@ -7,6 +7,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Center(
+        key: new Key('mainCenter'),
         child: ContadorPage(),
       ),
     );
